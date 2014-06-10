@@ -124,11 +124,10 @@ width: 100%;
 }
 
 .navbar-inverse .navbar-nav > li > a{
-color: #228692;
+
 background-color: transparent;
 padding: 0 15px;
 margin: 25px 0;
-border-right: 1px #2c8692 solid;
 }
 
 }
@@ -152,6 +151,12 @@ border-right: 1px #2c8692 solid;
   margin-top: 80px;
   min-height: 262px;
   height: auto;
+}
+
+
+#sidebar-module.expanded{
+	position: absolute;
+	top: 0;
 }
 
 	

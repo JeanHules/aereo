@@ -42,7 +42,6 @@
     <script src="js/scrollTo.js"></script>
     <script src="js/init.js"></script>
     <script src="js/flowtext.js"></script>
-     <script src="js/stickyscroll.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -51,41 +50,8 @@
 
   </head>
 <style>
-	    .item {
-      display: inline-block;
-      zoom: 1;
-      *display: inline;
 
-      vertical-align: top;
-      min-width: 200px;
-      min-height: 200px;
 
-    }
-    .item.full{
-  	  width: auto;
-  	  min-height: 100%;
-    }
-    
-     .item.threequarter{
-	     width: auto;
-	     min-height: 100%;
-    }
-    
-     .item.col-sm-4{
-	     position: absolute;
-			width: 300px;
-			height: auto;
-			display: block;
-			vertical-align: baseline;
-			float: left;
-    }
-    
-     .item.col-sm-8{
-	     margin-left: 350px;
-	     overflow: hidden;
-	     width: calc(100% - 300px) !important;
-    }
-    
 </style>
   <body>
   
@@ -115,7 +81,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav float-right">
-            <li class="Home"><a href="#Home" id="speakout-btn" class="speakout-btn uppercase">Speak Out</a></li>
+            <li class="Home active"><a href="#Home" id="speakout-btn" class="speakout-btn uppercase">Speak Out</a></li>
             <!-- <li class="active Home"><a href="#Home">Home</a></li> -->
 	          <li class="LearnMore"><a href="#LearnMore" class="">Learn More</a></li>
 	          <li class="Connect"><a href="#Connect" class="">Connect</a></li>
@@ -167,40 +133,28 @@ at">Tweet</a>
 	
 </section>
 <section id="LearnMore" class="text-area nav-section full-width-on-mobile">
-	<div class="container one">
-  <div class="row">
-      <div class="col-sm-4 item blog-sidebar float-right" data-sticky_parent=
-      "" id="sideBarSection">
-          <div class="sidebar-module sidebar-module-inset" id=
-          "sidebar-module">
-              <div class="h1-box uppercase anton text-center">
-                  Speak Out
-              </div>
-
-              <p class="small-text green-text text-center">Protect your
-              right to use a cloud-based antenna. Contact your local
-              legislators.</p>
-
-              <form id="zipCodeForm">
-                  <div class="zipcode-box">
-                      <input id="zipCodeField" maxlength="5" onblur=
-                      "this.placeholder = 'Zip Code'" onfocus=
-                      "this.placeholder = ''" placeholder="Zip Code"
-                      type="text"> <input id="zipCodeBtn" type="submit">
-
-                      <p id="errorMessage"></p>
-                  </div>
-              </form>
-
-              <div id="showOnAjax">
-                  <p class="special-font green-text medium-size">What to
-                  say?</p>
-
-                  <p class="body-text">Fill in your name and the
-                  congressmans name below. Then copy the letter and paste
-                  it to one of the congressmen through Twitter, Facebook
-                  or email.</p>
-                  <textarea id="messageToText" readonly>
+	<div class="container">
+	
+	<div class="row">
+	
+			<div id="sideBarSection" class="col-sm-4 blog-sidebar float-right">
+      <div id="sidebar-module" class="default sidebar-module sidebar-module-inset">
+      	<div class="h1-box uppercase anton text-center">
+        Speak Out
+      	</div>
+        <p class="small-text green-text text-center">Protect your right to use a cloud-based antenna. Contact your local legislators.</p>
+        <form id="zipCodeForm" type="submit">
+        	<div class="zipcode-box">
+       	  	<input type="text" maxlength="5" id="zipCodeField" placeholder="Zip Code" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Zip Code'">
+       	 	  <input type="submit" id="zipCodeBtn" >
+       	 	  <p id="errorMessage"></p>
+       	  </div>
+        </form>
+        
+        <div id="showOnAjax">
+	        <p class="special-font green-text medium-size">What to say?</p>
+	        <p class="body-text">Fill in your name and the congressmans name below. Then copy the letter and paste it to one of the congressmen through Twitter, Facebook or email.</p>
+	        <textarea id="messageToText" readonly>
 Dear [Elected Official X], 
 
 The Supreme Court got it right. 
@@ -211,69 +165,104 @@ For decades, Americans have had the right to watch over-the-air broadcast televi
 
 Sincerely 
 [Consumer X]
-</textarea>
 
-                  <div id="congressOfficials"></div>
-              </div>
-          </div>
-      </div>
+					</textarea>
+					<div id="congressOfficials"></div>
+				
+        </div>
+		</div>
+		
+		</div>	
 
-      <div class="col-sm-8 item blog-main float-left" id="blog-main">
-          <h3 class="black-text featured-text padding-top-25">On June XX,
-          2014 the United States Supreme Court issued a decision that
-          protects and preserves your right to use the antenna of your
-          choice to access broadcast television. This historic decision
-          is a victory for innovation, progress and most of all, for you,
-          the consumer.</h3>
+    <div id="blog-main" class="col-sm-8 blog-main float-left">
+			
+			<h3 class="black-text featured-text padding-top-25">On June XX, 2014 the United States Supreme Court issued a decision that protects and preserves your right to use the antenna of your choice to access broadcast television. This historic decision is a victory for innovation, progress and most of all, for you, the consumer.  </h3>
+			
+			
+			<h2 class="green-text special-font padding-top-15">Make your voice heard</h2>
 
-          <h2 class="green-text special-font padding-top-15">Make your
-          voice heard</h2>
+			<p class="main-p">Contact your lawmakers and tell them how important it is to you that the nation's highest court has protected your right to use a cloud-based antenna to access over-the-air broadcast television. </p>
+			
+			<p class="main-p">Read the full decision here and tell your elected officials that you're happy the Supreme Court has protected innovation, consumer choice and your television freedom.</p>
+			
+			<h2 class="green-text special-font padding-top-15">Learn More</h2>
 
-          <p class="main-p">Contact your lawmakers and tell them how
-          important it is to you that the nation's highest court has
-          protected your right to use a cloud-based antenna to access
-          over-the-air broadcast television.</p>
+			<p class="second-p special-font green-text">Since the dawn of television, American consumers have had the right to use an antenna to watch over-the-air broadcast television.  And, since that time, new technologies have emerged that have enhanced the television watching experience. From VCRs and DVRs, to rabbit-ear and cloud-based antennas, innovations on technology and equipment have made consumer access to free broadcas television simpler and more convenient. </p>
+			
+			<p class="main-p">At Aereo we like to make things simple for you. We set out to modernize access to free broadcast television. We set out to make it easy for consumers to use the same combination of equipment they can use at home to do this - an antenna and DVR – and do this remotely without boxes or wires. Ever wonder where the boxes or wires went? Or how they got  there? In this section we provide you with answers. </p>
+			
+			<p class="second-p special-font green-text">Hear from the individuals behind Aereo's creation and operation as give you an inside look at Aereo and its technology.</p>
+			
+			<div class="iframe-box">
+				<iframe width="640" height="360" class="iframe-video " src="//www.youtube.com/embed/saQtNCMkoRk?controls=0&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			
+			
+			<div id="accordion" class="vpadding-25">
+				<a href="#" id="accordion-trigger" class="padding-bottom-13 atoggle-btn"><p><span class='plus'>+</span><span class='minus'>-</span>Background Brief</p></a>
+				<div class="accordion padding-top-13">
+					<ul>
+					
+					<li>
+						<div class="link-area full-width-on-mobile full-width-on-tablet">
+						<a href="#" class="accordion-toggle-btn atoggle-btn"><h2><span class='plus'>+</span><span class='minus'>-</span>Opinions</h2></a>
+						<div class="links">
+							<ul class="link-list">
+		              <li><a href="pdf/1_opinions/2%20-%20Second%20Circuit%20Court%20of%20Appeals%20Decision%20(April%2011,%202013).pdf" class="main-link" target="_blank">Second Circuit Court of Appeals Decision</a><span class="date">(April 1, 2013)</span></li>
+		              <li><a href="pdf/1_opinions/Southern%20District%20of%20New%20York%20Decision%20(Judge%20Alison%20J.%20Nathan)%20(July%2011,%202012).pdf" class="main-link" target="_blank">Southern District of New York Decision</a><span class="date">(Judge Alison J. Nathan) (July 11, 2012)</span></li>
+		           </ul>
+						</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="link-area full-width-on-mobile full-width-on-tablet">
+						<a href="#" class="accordion-toggle-btn atoggle-btn"><h2><span class='plus'>+</span><span class='minus'>-</span>Aereo&rsquo;s Briefs</h2></a>
+						<div class="links">
+		           <ul>
+		              <li><a href="pdf/2_aereos_briefs/Aereo%20Response%20Brief%20(March%2026,%202014)%20FINAL%20FILED-1.pdf" class="main-link" target="_blank">Aereo&rsquo;s US Supreme Court Respondent&rsquo;s Brief</a><span class="date">(March 26, 2014)</span></li>
+		              <li><a href="pdf/2_aereos_briefs/Aereo&rsquo;s%20U.S.%20Supreme%20Court%20Brief%20on%20Petition%20for%20a%20Writ%20of%20Certiorari%20(December%2012,%202013).pdf" class="main-link" target="_blank">Aereo&rsquo;s U.S. Supreme Court Brief on Petition for a Writ of Certiorari</a><span class="date">(December 12, 2013)</span></li>
+		              <li><a href="pdf/2_aereos_briefs/Aereo&rsquo;s%20Appeal%20Brief%20(Second%20Circuit)%20(October%2019,%202012).pdf" class="main-link" target="_blank">Aereo&rsquo;s Second Circuit Court of Appeals Appellee&rsquo;s Brief (Second Circuit) </a><span class="date">(October 19, 2012)</span></li>
+		           </ul>
+						</div>
+						</div>
+	       	</li>
+					
+					<li class="padding-bottom-20">
+						<div class="link-area full-width-on-mobile full-width-on-tablet">
+						<a href="" class="accordion-toggle-btn atoggle-btn"><h2><span class='plus'>+</span><span class='minus'>-</span>Amicus Briefs</h2></a>
+							<div class="links">
+		             <ul>
+		                <li><a href="pdf/3_amicus_briefs/ABC%20v.%20Aereo%20-%20DISH%20&%20EchoStar%20Amicus%20Brief.pdf" class="main-link" target="_blank">Brief of Dish Network L.L.C. and Echostar Technologies L.L.C. as Amici Curiae in Support of Aereo</a><span class="date">(April 2, 2014)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461%20bsac%20American%20Cable%20Assoc..pdf" class="main-link" target="_blank">Brief of the American Cable Association in Support of Aereo </a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461%20bsac%20Competition%20Law%20Professors.pdf" class="main-link" target="_blank">Brief of Competition Law Professors, Southwestern Law Student Andrew Pletcher, and Professor Michael M. Epstein, in Association with the Amicus Project At Southwestern Law School, as Amici Curiae in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li>
+		                <li><a href="pdf/3_amicus_briefs/13-461%20bsac%20EFF%20PK%20CEA%20EA.pdf" class="main-link" target="_blank">Brief of the Electronic Frontier Foundation, Public Knowledge, the Consumer Electronics Association, and Engine Advocacy in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461%20Small%20Broadcasters.pdf" class="main-link" target="_blank">Brief of Small and Independent Broadcasters in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461_bsac_Law%20Professors%20and%20Scholars.pdf" class="main-link" target="_blank">Brief of Amici Curiae of Law Professors and Scholars in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461bsac%20The%20Consumer%20Federation.pdf" class="main-link" target="_blank">Brief of the Consumer Federation of America and the Consumers Union in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461bsacComputerand%20CommunicationsIndustry.pdf" class="main-link" target="_blank">Brief of Computer & Communications Industry Association and Mozilla Corporation as Amici Curiae in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/13-461%20bsac%2036%20Law%20Professors.pdf" class="main-link" target="_blank">Brief of 36 Intellectual Property and Copyright Law Professors as Amici Curiae in Support of Aereo</a><span class="date">(April 2, 2014) </span></li>
+		                <li><a href="pdf/3_amicus_briefs/The%20Consumer%20Federation%20of%20America%20and%20Consumers%20Union%20in%20Support%20of%20Appellees%20(Second%20Circuit)%20(November%2013,%202012).pdf" class="main-link" target="_blank">The Consumer Federation of America and Consumers Union in Support of Aereo (Second Circuit)</a><span class="date">(November 13, 2012)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/Intellectual%20Property%20and%20Copyright%20Law%20Professors%20in%20Support%20of%20Aereo%20Amicus%20Brief%20(Second%20Circuit)%20(October%2026,%202012).pdf" class="main-link" target="_blank">Intellectual Property and Copyright Law Professors in Support of Aereo Amicus Brief (Second Circuit)</a><span class="date">(October 26, 2012)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/Electronic%20Frontier%20Foundation,%20Public%20Knowledge,%20and%20the%20Consumer%20Electronics%20Association%20Amicus%20Brief%20in%20Support%20of%20Aereo%20(Second%20Circuit)%20(October%2026,%202012).pdf" class="main-link" target="_blank">Electronic Frontier Foundation, Public Knowledge, and the Consumer Electronics Association Amicus Brief in Support of Aereo (Second Circuit) </a><span class="date">(October 26, 2012)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/CCIA%20&%20Internet%20Association%20Amicus%20Brief%20in%20Support%20of%20Affirmance%20(Second%20Circuit)%20(October%2025,%202012).pdf" class="main-link" target="_blank">CCIA & Internet Association Amicus Brief in Support of Affirmance (Second Circuit)</a><span class="date">(October 25, 2012)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/Electronic%20Frontier%20Foundation%20&%20Public%20Knowledge%20Amicus%20Brief%20(District%20Court)%20(May%2023,%202012).pdf" class="main-link" target="_blank">Electronic Frontier Foundation & Public Knowledge Amicus Brief (District Court)</a><span class="date">(May 23, 2012)</span></li>
+		                <li><a href="pdf/3_amicus_briefs/NetCoalition%20and%20CCIA%20Amicus%20Brief%20(District%20Court)%20(May%2022,%202012).pdf" class="main-link" target="_blank">NetCoalition and CCIA Amicus Brief (District Court)</a><span class="date">(May 22, 2012)</span></li>
+		             </ul>
+		          </div>
+		          </div>
+		        </li>
+		      </ul>
+				</div>
+			</div>
 
-          <p class="main-p">Read the full decision here and tell your
-          elected officials that you're happy the Supreme Court has
-          protected innovation, consumer choice and your television
-          freedom.</p>
+		</div>
+		
+		
+		
 
-          <h2 class="green-text special-font padding-top-15">Learn
-          More</h2>
-
-          <p class="second-p special-font green-text">Since the dawn of
-          television, American consumers have had the right to use an
-          antenna to watch over-the-air broadcast television. And, since
-          that time, new technologies have emerged that have enhanced the
-          television watching experience. From VCRs and DVRs, to
-          rabbit-ear and cloud-based antennas, innovations on technology
-          and equipment have made consumer access to free broadcas
-          television simpler and more convenient.</p>
-
-          <p class="main-p">At Aereo we like to make things simple for
-          you. We set out to modernize access to free broadcast
-          television. We set out to make it easy for consumers to use the
-          same combination of equipment they can use at home to do this -
-          an antenna and DVR – and do this remotely without boxes or
-          wires. Ever wonder where the boxes or wires went? Or how they
-          got there? In this section we provide you with answers.</p>
-
-          <p class="second-p special-font green-text">Hear from the
-          individuals behind Aereo's creation and operation as give you
-          an inside look at Aereo and its technology.</p>
-
-          <div class="iframe-box">
-              <iframe class="iframe-video margin-bottom-50" frameborder=
-              "0" height="360" src=
-              "//www.youtube.com/embed/saQtNCMkoRk?controls=0&amp;rel=0&amp;showinfo=0"
-              width="640"></iframe>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="full"></div>
+	</div>
 </section>
 
 
@@ -360,8 +349,6 @@ at">Tweet</a>
 
 <script type="text/javascript">
 
-window.boxDistance = '600';
-
 $("#sideh1").flowtype({
     minFont: 30,
     fontRatio: 50
@@ -399,20 +386,18 @@ $(document).ready(function () {
     var zipcode;
     $("#zipCodeBtn").click(function (e) {
         zipcode = $('#zipCodeField').val();
-        window.boxDistance = '530';
-        
+
         $.ajax({
             url: 'http://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipcode + '&apikey=42c9ef01b502414494caa1a552626820&jsonp=my_callback',
             dataType: 'jsonp',
             success: function (data) {
-	            	$(document.body).trigger("sticky_kit:recalc");
-                console.log("Triggering recalc");
-                		
+
                 if (data.count == 0) {
                     $("#errorMessage").text("Invalid Zip Code");
                     $( "#errorMessage" ).animate({height: 28}, 100);
                 } else {
-                		
+                		$.scrollTo( $('#LearnMore'), 400, { easing:'swing'  , offset: {top:-80} });
+                		$('#sidebar-module.default').removeClass('default fixed-top absolute-bottom').addClass('expanded');
 	                	$( "#errorMessage" ).animate({height: 0}, 100);
                     $("#showOnAjax").fadeIn("fast");
                     var item = [];
@@ -555,24 +540,8 @@ $(window).resize(function () {
     // Kick off one resize to fix all videos on page load
 }).resize();
 
-(function() {
 
-    $(".container .item").stick_in_parent();
-  
-
-    
-
-    $(document.body).on("click", ".recalc", function() {
-      console.log("Triggering recalc");
-      $(document.body).trigger("sticky_kit:recalc")
-    });
-
-
-   
-
-  })();
-
-   
+   window.boxDistance = '180';
    
 $(window).load(function(){
 
@@ -599,13 +568,12 @@ $(window).load(function(){
 
     // This will fire when document is ready:
 
-
-
-
-/*
-    var length = $('#LearnMore').height() - $('#sidebar-module').height() + $('#LearnMore').offset().top - boxDistance;
     
-    var height = $('#sidebar-module').height();
+
+
+    var length = $('#LearnMore').height() - $('#sidebar-module.default').height() + $('#LearnMore').offset().top - boxDistance;
+    
+    var height = $('#sidebar-module.default').height();
 
     $(window).scroll(function () {
 
@@ -614,32 +582,47 @@ $(window).load(function(){
 
         if (scroll < $('#LearnMore').offset().top - 30) {
 
-            $('#sidebar-module').removeClass('fixed-top absolute-bottom');
-            $('#sidebar-module').addClass('absolute-top');
+            $('#sidebar-module.default').removeClass('fixed-top absolute-bottom');
+            $('#sidebar-module.default').addClass('absolute-top');
 
         } else if (scroll > length) {
 
-            $('#sidebar-module').removeClass('fixed-top absolute-top');
-            $('#sidebar-module').addClass('absolute-bottom');
+            $('#sidebar-module.default').removeClass('fixed-top absolute-top');
+            $('#sidebar-module.default').addClass('absolute-bottom');
 
         } else {
-        
-	        	$('#sidebar-module').removeClass('absolute-bottom absolute-top');
-            $('#sidebar-module').addClass('fixed-top');
+	        	$('#sidebar-module.default').removeClass('absolute-bottom absolute-top');
+            $('#sidebar-module.default').addClass('fixed-top');
            
-            if($(window).width() >= 768) {
+           if($(window).width() >= 768) {
             
-	            $('#sidebar-module.fixed-top').width( $('#sideBarSection').width() );
+	            $('#sidebar-module.fixed-top.default').width( $('#sideBarSection').width() );
 	          
 	            }
         }
     });
-*/
 
 });
 
 
-
+(function($) {
+  var Panels = $('.accordion').hide();
+  var allPanels = $('.accordion .links').hide();
+    
+    
+  $("#accordion-trigger").click(function(){
+  	$(this).toggleClass('active');
+	  Panels.slideToggle();
+    return false;
+  });
+  
+  $('.accordion-toggle-btn').click(function() {
+    /* allPanels.slideUp(); */
+    $(this).toggleClass('active');
+    $(this).next().slideToggle();
+    return false;
+  });
+})(jQuery);
 
 </script>
 </body></html>
