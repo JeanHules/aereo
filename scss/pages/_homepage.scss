@@ -71,7 +71,7 @@
 }
 
 .special-font{
-	font-family: 'Merriweather', serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -80,15 +80,14 @@ body, html{
 }
 
 .navbar-inverse {
-background-color: #505254;
-border-color: #505254;
+background-color: rgba(0,0,0,.8);
+border-color: rgba(0,0,0,.8);
 border:none;
 }
 
 #hero{
 	background: url("../img/header.jpg");
 	background-size: cover;
-	margin-top: 50px;
 	background-repeat: no-repeat;
 	background-color: white;
 	
@@ -126,8 +125,9 @@ text-decoration: underline;
 color: #fff;
 background-color: transparent;
 padding: 0 30px;
-margin: 25px 0;
+margin: 24px 0;
 border-right: 1px #fff solid;
+font-weight: bold;
 }
 
 
@@ -148,10 +148,14 @@ text-decoration: underline;
 background: transparent;
 }
 
-.navbar-brand{
-	display: block;
-	overflow: hidden;
-	padding: 23px 0;
+.navbar-brand {
+display: block;
+overflow: hidden;
+padding: 13px 0;
+
+img{
+	height: 43px;
+}
 }
 
 h3{
@@ -248,7 +252,7 @@ width: 232px;
 }
 
 .no-padding{
-	padding: 0;
+	padding: 0 !important;
 }
 
 .no-border{
@@ -303,7 +307,7 @@ width: 232px;
 button, a, input{
 	outline: none;
 }
-a:active, button:active, #submit:active{
+a:active, button:active{
 -webkit-transform: translateY(1px);
 -moz-transform: translateY(1px);
 -ms-transform: translateY(1px);
@@ -431,7 +435,7 @@ font-size: 1.3em;
 line-height: 1.5em;
 padding: 23px 15px 23px 15px;
 font-weight: 100;
-font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -515,7 +519,7 @@ margin: 24px 0;
 	
 	h1{
 		margin-bottom: 28px;
-		font-family: 'Merriweather', serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 43px;
 		font-weight: 100;
 	}
@@ -577,7 +581,7 @@ margin: 24px 0;
 
 	p{
 		color: rgb(31,133,144);
-		font-family: 'Merriweather', serif;
+		font-family: 'Open Sans', sans-serif;
 		margin: 0;
 		margin-bottom: 9px;
 		font-size: 24px;
@@ -618,7 +622,7 @@ ul{
 	
 	h2{
 		color: rgb(31,133,144);
-		font-family: 'Merriweather', serif;
+		font-family: 'Open Sans', sans-serif;
 		margin: 0;
 		margin-bottom: 9px;
 		font-size: 27px;
@@ -706,39 +710,58 @@ footer a:hover{
 
 .nav{
 
-#speakout-btn{	
-background: transparent;
-border: 2px #fff solid;
+
+#speakout-btn{
+letter-spacing: .06em;
+margin: 16px 0;
+text-decoration: none;
+color: #000;
 font-weight: 600;
 font-size: 17px;
 border-radius: 10px;
 padding: 7px 29px;
-color: #fff;
-letter-spacing: .06em;
-margin: 16px 0;
-text-decoration: none;
+border:1px solid #ffc826; 
+-webkit-border-radius: 10px; 
+-moz-border-radius: 10px;
+border-radius: 10px;
+
+ background-color: #f9bc00; background-image: -webkit-gradient(linear, left top, left bottom, from(#f9bc00), to(#f9cb00));
+ background-image: -webkit-linear-gradient(top, #f9cb00, #f9bc00);
+ background-image: -moz-linear-gradient(top, #f9cb00, #f9bc00);
+ background-image: -ms-linear-gradient(top, #f9cb00, #f9bc00);
+ background-image: -o-linear-gradient(top, #f9cb00, #f9bc00);
+ background-image: linear-gradient(to bottom, #f9bc00, #f9cb00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f9bc00, endColorstr=#f9cb00);
 }
 
-#speakout-btn:hover, .active #speakout-btn{
-	background: #fff;
-	color: #1f8590;
+#speakout-btn:hover{
+ border:1px solid #f7b800;
+ background-color: #ffc92b; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc92b), to(#ce9a01));
+ background-image: -webkit-linear-gradient(top, #ffc92b, #ce9a01);
+ background-image: -moz-linear-gradient(top, #ffc92b, #ce9a01);
+ background-image: -ms-linear-gradient(top, #ffc92b, #ce9a01);
+ background-image: -o-linear-gradient(top, #ffc92b, #ce9a01);
+ background-image: linear-gradient(to bottom, #ffc92b, #ce9a01);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc92b, endColorstr=#ce9a01);
 }
+
 }
 
 #hero{
 position: relative;
+background-position-x: 50% !important;
 #headerTextBox{
 	position: absolute;
 	width: 100%;
-	top: 40%;
+	top: 47%;
 	margin-top: -100px;
 	
 	p{
 		width: 100%;
-		max-width: 470px;
+		max-width: 492px;
 		margin: 0 auto;
 		line-height: 22px;
-		padding-bottom: 20px;
+		padding-bottom: 42px;
+		padding-top: 13px;
+
 	}
 	
 	h1{
@@ -960,7 +983,7 @@ margin-bottom: 53px;
 
 .iframe-box{
 	width: 100%;
-	
+	margin-bottom: 50px;
 }
 
 

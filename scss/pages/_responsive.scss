@@ -39,6 +39,28 @@ padding-bottom: 10px;
 }
 
 
+#bottomGreen .email-box {
+width: 409px;
+}
+
+
+.sidebar-module .zipcode-box {
+position: relative;
+color: #bdc0c2;
+width: 100%;
+display: block;
+margin: 0 auto;
+}
+
+.sidebar-module .h1-box {
+width: 100%;
+font-size: 5vw;
+color: #1f8590;
+text-align: center;
+line-height: 55px;
+}
+
+
 #bottomGreen {
 
 .field-box {
@@ -162,15 +184,28 @@ margin: 25px 0;
 	
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
 
-	
+	.navbar-brand img {
+height: 28px;
+}
+
+
+#hero #headerTextBox {
+position: absolute;
+width: 100%;
+top: 44%;
+margin-top: -100px;
+}
+
+
 	#LearnMore{
 		margin-bottom: 73px;
 	}
 	
 .sidebar-module {
 margin-left: 0;
+margin-bottom: 0;
 }
 
 .blog-sidebar{
@@ -392,8 +427,8 @@ font-size: 50px;
 }
 
 .sidebar-module .h1-box {
-width: 80%;
-font-size: 65px;
+width: 100%;
+font-size: 60px;
 line-height: 75px;
 }
 
@@ -407,15 +442,33 @@ font-size: 35px;
 }
 
 #hero #headerTextBox p {
-width: 90%;
+width: 100%;
+max-width: 282px;
+margin: 0 auto;
+line-height: 22px;
+padding-bottom: 26px;
+padding-top: 0px;
 }
 
+#bottomGreen .email-box {
+width: 100%;
+}
+
+
+
 #hero {
-height: 280px;
+height: 360px;
 }
 
 .copyright-text{
 	width: 100%;
+}
+
+#hero #headerTextBox {
+position: absolute;
+width: 100%;
+top: 47%;
+margin-top: -100px;
 }
 
 }
